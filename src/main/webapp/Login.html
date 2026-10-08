@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="Css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <!-- logo -->
+    <div class="container-fluid py-3">
+        <div class="row align-items-center">
+
+            <div class="col-md-2 text-center">
+                <a href="Home.html">
+                    <img src="Image/logo.png" class="logo" alt="Logo"></a>
+            </div>
+
+            <div class="col-md-8">
+                <input type="text" class="form-control search-box" placeholder="Search Plants, Seeds, Pots...">
+            </div>
+
+            <div class="col-md-2 text-center">
+                <button class="btn btn-success mt-3">Login</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Home.html">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Plant.html">PLANTS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Seed.html">SEEDS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="potandplanter.html">POTS & PLANTERS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Plantcare.html">PLANT CARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact us.html">CONTACT US</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <!-- Form -->
+    <form action="login" method="post">
+    <div class="row">
+        <div class="col-sm-6 loginform">
+
+            <div class="container page">
+                <div class="login">
+                    <h3>Login</h3>
+                    <p>Don't have an account yet?</p>
+                    <a href="Create.html" class="p">Create Account</a>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container page">
+                <input type="email" class="form-control txt" id="email"
+                    placeholder="Email" name="email">
+            </div>
+
+            <br>
+
+            <div class="container page">
+                <input type="password" class="form-control txt" id="pwd"
+                    placeholder="Password" name="pwd">
+            </div>
+
+            <div class="container page">
+                <p class="p">Forget your Password?</p>
+            </div>
+
+            <div class="container page">
+                <button type="submit" class="btn btn-success button">
+                    Login
+                </button>
+            </div>
+
+        </div>
+    </div>
+</form>
+<script>
+function Login() {
+    let email = document.getElementById("email").value;
+    let pwd = document.getElementById("pwd").value;
+
+    if (email === "" || pwd === "") {
+        alert("Please fill all fields");
+        return false;
+    }
+
+    if (pwd.length < 6) {
+        alert("Password must be at least 6 characters long");
+        return false;
+    }
+
+    return true;
+}
+</script>
+</body>
+
+</html>
